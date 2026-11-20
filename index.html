@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio of Tushar, Java backend developer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tushar | Java Developer</title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="#hero" class="logo">Tushar</a>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section id="hero">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <p class="eyebrow">Hello, I'm</p>
+            <h1>Tushar</h1>
+            <!-- <p class="tagline">Java · Spring Boot · PostgreSQL</p> -->
+            <p class="tagline">Learning by building</p>
+            <div class="hero-links">
+              <a
+                href="https://github.com/TusharS230"
+                target="_blank"
+                rel="noopener"
+                class="btn"
+                >GitHub</a
+              >
+              <a
+                href="https://www.linkedin.com/in/tushar-singh-sol/"
+                target="_blank"
+                rel="noopener"
+                class="btn btn-outline"
+                >LinkedIn</a
+              >
+              <a
+                href="assets/resume.pdf"
+                target="_blank"
+                class="btn btn-outline"
+                >Resume</a
+              >
+            </div>
+          </div>
+          <img
+            src="assets/imadba.jpeg"
+            alt="Photo of Tushar"
+            class="hero-img"
+          />
+        </div>
+      </section>
+
+      <section id="about">
+        <div class="container">
+          <h2>About me</h2>
+          <p class="about-text">
+            I'm Tushar, a final-year Computer Science student at KLE
+            Technological University, graduating in 2027. I mostly work on the
+            backend side of things, using Java, Spring Boot and PostgreSQL. I
+            like figuring out how an app actually works behind the screen: how
+            data is stored, how requests are handled, and how to keep things
+            clean as a project grows.
+          </p>
+          <p class="about-text">
+            Outside of projects, I spend time on DSA and SQL problems. I'm
+            currently looking for opportunities where I can learn from a good
+            team and grow as a developer.
+          </p>
+        </div>
+      </section>
+
+      <section id="education">
+        <div class="container">
+          <h2>Education</h2>
+          <div class="edu-list">
+            <div class="edu-item">
+              <div>
+                <h3>B.E. in Computer Science and Engineering</h3>
+                <p class="edu-place">KLE Technological University</p>
+              </div>
+              <div class="edu-meta">
+                <p>2023 - 2027(expected)</p>
+                <p>CGPA: 7.92</p>
+              </div>
+            </div>
+
+            <div class="edu-item">
+              <div>
+                <h3>Class 12</h3>
+                <p class="edu-place">Sunbeam Academy (CBSE)</p>
+              </div>
+              <div class="edu-meta">
+                <p>2022</p>
+                <p>Percentage: 79%</p>
+              </div>
+            </div>
+
+            <div class="edu-item">
+              <div>
+                <h3>Class 10</h3>
+                <p class="edu-place">Sunbeam Academy (CBSE)</p>
+              </div>
+              <div class="edu-meta">
+                <p>2021</p>
+                <p>Percentage: 88.16%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <div class="container">
+          <h2>Projects</h2>
+          <div class="project-grid">
+            <article class="project-card">
+              <h3>Exam Proctor SaaS</h3>
+              <p>
+                An online exam platform that many colleges can share, where each
+                college sees only its own exams, students and results.
+              </p>
+              <ul class="tech-tags">
+                <li>Java 21</li>
+                <li>Spring Boot</li>
+                <li>Spring Security</li>
+                <li>JWT</li>
+                <li>WebSockets</li>
+                <li>PostgreSQL</li>
+                <li>Docker</li>
+              </ul>
+              <ul class="project-points">
+                <li>
+                  Multi-tenant setup where every request is checked against the
+                  college stored in the user's login token, so no college can
+                  see another's data.
+                </li>
+                <li>
+                  Live proctoring: tab switches, copy/paste and right-clicks
+                  during an exam show up on the admin's dashboard instantly over
+                  WebSockets.
+                </li>
+                <li>
+                  Three roles (Super Admin, College Admin, Student), auto-graded
+                  MCQs, and a background job that closes exams on time and flags
+                  late submissions.
+                </li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://exxamproctor.netlify.app"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/TusharS230/exam-proctor-system"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-outline"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+
+            <article class="project-card">
+              <h3>Reviewr</h3>
+              <p>
+                A place where developers share code snippets and review each
+                other's code with ratings and comments.
+              </p>
+              <ul class="tech-tags">
+                <li>Java 17</li>
+                <li>Spring Boot</li>
+                <li>Spring Security</li>
+                <li>JWT</li>
+                <li>PostgreSQL</li>
+                <li>JavaScript</li>
+              </ul>
+              <ul class="project-points">
+                <li>
+                  REST API with secure sign-up and login, using BCrypt-hashed
+                  passwords and JWT tokens.
+                </li>
+                <li>
+                  Snippet browsing with filters by language and sorting, plus a
+                  code viewer with one-click copy.
+                </li>
+                <li>
+                  1-5 star ratings and reviews with average scores, and rules so
+                  users can only delete their own reviews.
+                </li>
+              </ul>
+              <div class="project-links">
+                <a
+                  href="https://regal-rugelach-30835c.netlify.app/"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn"
+                  >Live Demo</a
+                >
+                <a
+                  href="https://github.com/TusharS230/reviewr"
+                  target="_blank"
+                  rel="noopener"
+                  class="btn btn-outline"
+                  >GitHub</a
+                >
+              </div>
+            </article>
+          </div>
+          <p class="note">
+            <small
+              >Demos run on a free server, so the first load may take up to a
+              minute.</small
+            >
+          </p>
+        </div>
+      </section>
+
+      <section id="skills">
+        <div class="container">
+          <h2>Skills</h2>
+          <div class="skills-grid">
+            <div class="skill-group">
+              <h3>Languages</h3>
+              <p>Java, C++, SQL, JavaScript</p>
+            </div>
+            <div class="skill-group">
+              <h3>Backend</h3>
+              <p>Spring Boot, Spring Security, REST APIs, JWT, WebSockets</p>
+            </div>
+            <div class="skill-group">
+              <h3>Database and Tools</h3>
+              <p>PostgreSQL, Docker, Git, Postman, IntelliJ IDEA, VS Code</p>
+            </div>
+          </div>
+
+          <h3 class="sub-heading">Coding Profiles</h3>
+          <div class="profiles">
+            <a
+              href="https://leetcode.com/u/Tushar_2012/"
+              target="_blank"
+              rel="noopener"
+              class="profile-card"
+            >
+              <img
+                src="https://cdn.simpleicons.org/leetcode"
+                alt="LeetCode logo"
+                class="profile-logo"
+              />
+              <div>
+                <span class="profile-name">LeetCode</span>
+                <span class="profile-info">150+ problems solved</span>
+              </div>
+            </a>
+            <a
+              href="https://www.geeksforgeeks.org/profile/tusharsingh_2012"
+              target="_blank"
+              rel="noopener"
+              class="profile-card"
+            >
+              <img
+                src="https://cdn.simpleicons.org/geeksforgeeks"
+                alt="GeeksforGeeks logo"
+                class="profile-logo"
+              />
+              <div>
+                <span class="profile-name">GeeksforGeeks</span>
+                <span class="profile-info">190+ problems solved</span>
+              </div>
+            </a>
+            <a
+              href="https://codeforces.com/profile/jesterBoom"
+              target="_blank"
+              rel="noopener"
+              class="profile-card"
+            >
+              <img
+                src="https://cdn.simpleicons.org/codeforces"
+                alt="Codeforces logo"
+                class="profile-logo"
+              />
+              <div>
+                <span class="profile-name">Codeforces</span>
+                <span class="profile-info">Max Rating: 969</span>
+                <span class="profile-info">Current Rating: 856</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div class="container contact-content">
+          <h2>Contact</h2>
+          <p>Open to opportunities. Feel free to reach out.</p>
+          <a href="mailto:tusharsinghdec@gmail.com" class="btn btn-icon">
+            <svg
+              width="18"
+              height="18"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="M22 6 12 13 2 6" />
+            </svg>
+            tusharsinghdec@gmail.com
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <p>Built by Tushar with HTML, CSS and JS</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

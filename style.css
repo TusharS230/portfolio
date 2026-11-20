@@ -1,0 +1,380 @@
+/* Reset default spacing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "IBM Plex Sans", Arial, sans-serif;
+  background-color: #161616;
+  color: #e4e4e4;
+  line-height: 1.7;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* ---------- Navbar ---------- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #161616;
+  border-bottom: 1px solid #2c2c2c;
+}
+
+nav {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #9a9a9a;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+/* ---------- Sections (each one fills the screen) ---------- */
+section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 100px 24px 40px;
+}
+
+/* every second section is a slightly lighter grey */
+section:nth-child(even) {
+  background-color: #1c1c1c;
+}
+
+.container {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #e4e4e4;
+  color: #161616;
+  border: 1px solid #e4e4e4;
+  font-weight: 600;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #e4e4e4;
+  border: 1px solid #555555;
+}
+
+.btn-outline:hover {
+  background-color: transparent;
+  border-color: #e4e4e4;
+}
+
+/* ---------- Hero ---------- */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.eyebrow {
+  color: #9a9a9a;
+}
+
+h1 {
+  font-size: 56px;
+  line-height: 1.2;
+}
+
+.tagline {
+  color: #9a9a9a;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 18px;
+  margin: 10px 0 25px;
+}
+
+.hero-links {
+  display: flex;
+  gap: 12px;
+}
+
+.hero-img {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  filter: grayscale(100%); /* remove this line if you want a colour photo */
+}
+
+/* ---------- About ---------- */
+.about-text {
+  max-width: 700px;
+  font-size: 18px;
+  color: #bdbdbd;
+  margin-bottom: 16px;
+}
+
+/* ---------- Education ---------- */
+.edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.edu-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  background-color: #222222;
+  border: 1px solid #2f2f2f;
+  padding: 20px 24px;
+}
+
+.edu-item h3 {
+  font-size: 18px;
+}
+
+.edu-place {
+  color: #bdbdbd;
+}
+
+.edu-meta {
+  text-align: right;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  color: #9a9a9a;
+}
+
+/* ---------- Projects ---------- */
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.project-card {
+  background-color: #222222;
+  border: 1px solid #2f2f2f;
+  padding: 24px;
+}
+
+.project-card h3 {
+  font-size: 22px;
+  margin-bottom: 8px;
+}
+
+.project-card > p {
+  color: #bdbdbd;
+}
+
+.tech-tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.tech-tags li {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  padding: 3px 8px;
+  background-color: #2f2f2f;
+  color: #cfcfcf;
+}
+
+.project-points {
+  padding-left: 18px;
+  font-size: 15px;
+  color: #bdbdbd;
+  margin-bottom: 20px;
+}
+
+.project-links {
+  display: flex;
+  gap: 12px;
+}
+
+.note {
+  margin-top: 16px;
+  color: #808080;
+}
+
+/* ---------- Skills ---------- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 24px;
+}
+
+.skill-group {
+  background-color: #222222;
+  border: 1px solid #2f2f2f;
+  padding: 20px;
+}
+
+.skill-group h3 {
+  font-size: 18px;
+  margin-bottom: 6px;
+}
+
+.skill-group p {
+  color: #bdbdbd;
+}
+
+/* ---------- Coding Profiles ---------- */
+.sub-heading {
+  font-size: 22px;
+  margin: 40px 0 20px;
+}
+
+.profiles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr; /* same as skills, so all cards line up */
+  gap: 24px;
+}
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  background-color: #222222;
+  border: 1px solid #2f2f2f;
+  padding: 16px 20px;
+}
+
+.profile-card:hover {
+  border-color: #808080;
+}
+
+.profile-logo {
+  width: 32px;
+  height: 32px;
+}
+
+.profile-name {
+  display: block;
+  font-weight: 600;
+}
+
+.profile-info {
+  display: block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  color: #9a9a9a;
+}
+
+/* ---------- Contact ---------- */
+.contact-content {
+  text-align: center;
+}
+
+.contact-content p {
+  font-size: 18px;
+  color: #bdbdbd;
+  margin-bottom: 20px;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  text-align: center;
+  padding: 20px;
+  color: #808080;
+  border-top: 1px solid #2c2c2c;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .hero-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .hero-img {
+    width: 180px;
+    height: 180px;
+  }
+
+  .project-grid,
+  .skills-grid,
+  .profiles {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-item {
+    flex-direction: column;
+  }
+
+  .edu-meta {
+    text-align: left;
+  }
+
+  .nav-links {
+    gap: 14px;
+    font-size: 14px;
+  }
+}
+
+/* Small phones: hide the logo so all nav links fit */
+@media (max-width: 480px) {
+  .logo {
+    display: none;
+  }
+
+  nav {
+    justify-content: center;
+  }
+}
