@@ -19,6 +19,16 @@ body {
 a {
   color: #ffffff;
   text-decoration: none;
+  transition:
+    color 0.2s,
+    background-color 0.2s,
+    border-color 0.2s;
+}
+
+/* Text highlight colour when selecting with the mouse */
+::selection {
+  background-color: #f4c542;
+  color: #161616;
 }
 
 /* ---------- Navbar ---------- */
@@ -28,6 +38,7 @@ header {
   width: 100%;
   background-color: #161616;
   border-bottom: 1px solid #2c2c2c;
+  z-index: 100; /* keeps the navbar above everything when scrolling */
 }
 
 nav {
@@ -42,6 +53,7 @@ nav {
 .logo {
   font-size: 20px;
   font-weight: 700;
+  color: #f4c542;
 }
 
 .nav-links {
@@ -55,7 +67,7 @@ nav {
 }
 
 .nav-links a:hover {
-  color: #ffffff;
+  color: #f4c542;
 }
 
 /* ---------- Sections (each one fills the screen) ---------- */
@@ -93,7 +105,8 @@ h2 {
 }
 
 .btn:hover {
-  background-color: #ffffff;
+  background-color: #f4c542;
+  border-color: #f4c542;
 }
 
 .btn-outline {
@@ -104,7 +117,14 @@ h2 {
 
 .btn-outline:hover {
   background-color: transparent;
-  border-color: #e4e4e4;
+  color: #f4c542;
+  border-color: #f4c542;
+}
+
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* ---------- Hero ---------- */
@@ -116,7 +136,7 @@ h2 {
 }
 
 .eyebrow {
-  color: #9a9a9a;
+  color: #f4c542;
 }
 
 h1 {
@@ -184,16 +204,75 @@ h1 {
 }
 
 /* ---------- Projects ---------- */
-.project-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+/* Title on the left, arrow buttons on the right */
+.projects-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.projects-header h2 {
+  margin-bottom: 0;
+}
+
+.slider-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.slider-btn {
+  width: 42px;
+  height: 42px;
+  font-size: 18px;
+  background-color: transparent;
+  color: #e4e4e4;
+  border: 1px solid #555555;
+  cursor: pointer;
+}
+
+.slider-btn:hover {
+  color: #f4c542;
+  border-color: #f4c542;
+}
+
+.slider-btn:disabled:hover {
+  color: #e4e4e4;
+  border-color: #555555;
+}
+
+.slider-btn:disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+/* The sliding row of project cards */
+.project-track {
+  display: flex;
   gap: 24px;
+  overflow-x: auto; /* lets the row scroll sideways */
+  scroll-snap-type: x mandatory; /* cards stop neatly in place */
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* hide scrollbar (Firefox) */
+}
+
+.project-track::-webkit-scrollbar {
+  display: none; /* hide scrollbar (Chrome, Edge) */
 }
 
 .project-card {
+  flex: 0 0 calc(50% - 12px); /* two cards fit on screen */
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
   background-color: #222222;
   border: 1px solid #2f2f2f;
   padding: 24px;
+  transition: border-color 0.2s;
+}
+
+.project-card:hover {
+  border-color: #f4c542;
 }
 
 .project-card h3 {
@@ -231,6 +310,7 @@ h1 {
 .project-links {
   display: flex;
   gap: 12px;
+  margin-top: auto; /* keeps buttons at the bottom of every card */
 }
 
 .note {
@@ -281,8 +361,12 @@ h1 {
   padding: 16px 20px;
 }
 
+.profile-card {
+  transition: border-color 0.2s;
+}
+
 .profile-card:hover {
-  border-color: #808080;
+  border-color: #f4c542;
 }
 
 .profile-logo {
@@ -311,12 +395,6 @@ h1 {
   font-size: 18px;
   color: #bdbdbd;
   margin-bottom: 20px;
-}
-
-.btn-icon {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
 }
 
 /* ---------- Footer ---------- */
@@ -348,7 +426,10 @@ footer {
     height: 180px;
   }
 
-  .project-grid,
+  .project-card {
+    flex: 0 0 85%; /* one card, with a bit of the next one showing */
+  }
+
   .skills-grid,
   .profiles {
     grid-template-columns: 1fr;
